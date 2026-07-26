@@ -3,7 +3,7 @@
     name: "Greg Lilly",
     title: "Master Barber",
     image:
-      "https://fischer-solutions.github.io/True-Barbers/Images/Greg_Lily.png",
+      "/Images/Greg_Lily.png",
     bio:
       "Greg has been cutting hair since 1995 and excels at bald fades, high & tight styles, and AFRO textures. He brings master-level technique and straight razor precision to every appointment.",
   },
@@ -11,7 +11,7 @@
     name: "Carlton Campbell",
     title: "Barber",
     image:
-      "https://fischer-solutions.github.io/True-Barbers/Images/Carlton_Campbell.png",
+      "/Images/Carlton_Campbell.png",
     bio:
       "Carlton’s goal is simple: satisfaction and smiles. He specializes in fades, tapers, scissor work, and a friendly, calm experience for kids and adults alike.",
   },
@@ -19,7 +19,7 @@
     name: "Tara Fowler",
     title: "Barbertologist",
     image:
-      "https://fischer-solutions.github.io/True-Barbers/Images/Tara_Fowler.png ",
+      "/Images/Tara_Fowler.png ",
     bio:
       "Tara delivers polished cuts, facial treatments, and expertly crafted styles across all hair textures. She is patient, professional, and ready to help clients feel refreshed.",
   },
@@ -27,7 +27,7 @@
     name: "Emad Geris",
     title: "Senior Barber",
     image:
-      "https://fischer-solutions.github.io/True-Barbers/Images/Emad_Geris.png",
+      "/Images/Emad_Geris.png",
     bio:
       "Emad has over 25 years of barbering experience and provides sharp line-ups, razor cuts, and a calm first-visit experience for young clients and families.",
   },
@@ -35,7 +35,7 @@
     name: "Marvin Reese",
     title: "Barber",
     image:
-      "https://fischer-solutions.github.io/True-Barbers/Images/Marvin_Reese.png",
+      "/Images/Marvin_Reese.png",
     bio:
       "Magic Marvin brings strong style skills for pompadours, fades, and contemporary looks. He is great with kids and enjoys making every guest feel confident.",
   },
@@ -43,7 +43,7 @@
     name: "Asia Robinson",
     title: "Barber",
     image:
-      "https://fischer-solutions.github.io/True-Barbers/Images/Asia_Robinson.png",
+      "/Images/Asia_Robinson.png",
     bio:
       "Asia is passionate about delivering the haircut clients want across all textures, from buzz cuts to fades, beard trims, and first-time barbershop experiences.",
   },
