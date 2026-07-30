@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero({ hero }) {
   const heroData = hero ?? {
@@ -34,24 +34,27 @@ export default function Hero({ hero }) {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background */}
+
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('Images/banner1.png",
+            "url('Images/banner1.png')",
         }}
       />
 
       <div className="absolute inset-0 bg-[#08172c]/75" />
 
+
       <div className="relative z-10 max-w-7xl px-6 text-center text-white">
+
 
         <p className="uppercase tracking-[6px] text-[#D4AF37] mb-4">
           {heroData.preTitle}
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+
+        <h1 className="hero-title font-bold leading-tight">
           {titleLines.map((line, index) => (
             <span key={index}>
               {line}
@@ -60,30 +63,34 @@ export default function Hero({ hero }) {
           ))}
         </h1>
 
-        <p className="max-w-2xl mx-auto mt-8 text-lg text-gray-300">
+
+        <p className="hero-description max-w-2xl mx-auto mt-8 text-gray-300">
           {heroData.description}
         </p>
+
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
 
           <a
-              href={heroData.primaryCtaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#D4AF37] text-[#08172c] px-8 py-4 rounded-full font-bold hover:scale-105 transition flex items-center justify-center gap-2"
-            >
-              {heroData.primaryCtaLabel}
-              <ArrowRight size={20} />
-            </a>
+            href={heroData.primaryCtaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-text bg-[#D4AF37] text-[#08172c] px-8 py-4 rounded-full font-bold hover:scale-105 transition flex items-center justify-center gap-2"
+          >
+            {heroData.primaryCtaLabel}
+            <ArrowRight size={20} />
+          </a>
+
 
           <a
             href={heroData.secondaryCtaUrl}
-            className="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-[#08172c] transition"
+            className="button-text border border-white px-8 py-4 rounded-full hover:bg-white hover:text-[#08172c] transition"
           >
             {heroData.secondaryCtaLabel}
           </a>
 
         </div>
+
 
         <div className="grid md:grid-cols-3 gap-6 mt-20">
 
@@ -92,20 +99,31 @@ export default function Hero({ hero }) {
               key={index}
               className="bg-white/10 backdrop-blur rounded-xl p-6"
             >
+
               {card.title && (
-                <h3 className={`mt-3 font-bold ${card.highlight ? "text-3xl text-[#D4AF37]" : ""}`}>
+                <h3
+                  className={`font-bold ${
+                    card.highlight
+                      ? "text-3xl text-[#D4AF37]"
+                      : ""
+                  }`}
+                >
                   {card.title}
                 </h3>
               )}
-              <p className="text-gray-300 text-sm">
+
+              <p className="section-description text-gray-300">
                 {card.description}
               </p>
+
             </div>
           ))}
 
         </div>
 
+
       </div>
+
     </section>
   );
 }

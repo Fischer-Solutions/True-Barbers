@@ -19,9 +19,13 @@ export default function Reviews() {
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-5xl font-bold text-center">
+        <h2
+          className="font-bold text-center"
+          style={{ fontSize: "var(--font-sectionTitle)" }}
+        >
           Client Reviews
         </h2>
+
 
         <div className="grid md:grid-cols-3 gap-8 mt-12">
 
@@ -30,11 +34,19 @@ export default function Reviews() {
               key={review.name}
               className="bg-white/10 p-8 rounded-2xl"
             >
-              <p className="text-gray-300">
+
+              <p
+                className="text-gray-300 leading-relaxed"
+                style={{ fontSize: "var(--font-sectionDescription)" }}
+              >
                 "{review.text}"
               </p>
 
-              <h3 className="mt-6 text-[#D4AF37] font-bold">
+
+              <h3
+                className="mt-6 text-[#D4AF37] font-bold"
+                style={{ fontSize: "var(--font-barberName)" }}
+              >
                 {review.name}
               </h3>
 

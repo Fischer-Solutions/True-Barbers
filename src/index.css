@@ -8,3 +8,71 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  --font-logo: 32px;
+  --font-nav: 20px;
+
+  --font-heroTitle: 72px;
+  --font-heroDescription: 18px;
+
+  --font-sectionTitle: 48px;
+  --font-sectionDescription: 18px;
+
+  --font-serviceTitle: 24px;
+  --font-serviceDescription: 18px;
+
+  --font-barberName: 24px;
+  --font-barberRole: 16px;
+  --font-barberBio: 18px;
+
+  --font-button: 16px;
+}
+
+.logo-text {
+  font-size: var(--font-logo);
+}
+
+.nav-text {
+  font-size: var(--font-nav);
+}
+
+.hero-title {
+  font-size: var(--font-heroTitle);
+}
+
+.hero-description {
+  font-size: var(--font-heroDescription);
+}
+
+.section-title {
+  font-size: var(--font-sectionTitle);
+}
+
+.section-description {
+  font-size: var(--font-sectionDescription);
+}
+
+.service-title {
+  font-size: var(--font-serviceTitle);
+}
+
+.service-description {
+  font-size: var(--font-serviceDescription);
+}
+
+.barber-name {
+  font-size: var(--font-barberName);
+}
+
+.barber-role {
+  font-size: var(--font-barberRole);
+}
+
+.barber-bio {
+  font-size: var(--font-barberBio);
+}
+
+.button-text {
+  font-size: var(--font-button);
+}

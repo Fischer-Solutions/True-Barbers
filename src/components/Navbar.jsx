@@ -28,7 +28,7 @@ const socialIcons = [
   },
   {
     name: "Map",
-    href: "https://www.google.com/maps/place/True+Barbers/@39.96121,-86.1287697,17z/data=!3m1!4b1!4m5!3m4!1s0x8814ada8e1a144b5:0x309866bcc6e917a4!8m2!3d39.96121!4d-86.126581",
+    href: "https://www.google.com/maps/place/True+Barbers/@39.96121,-86.1287697,17z/",
     src: "https://www.truebarbers.com/wp-content/uploads/2019/10/gplus.png",
   },
   {
@@ -40,6 +40,7 @@ const socialIcons = [
 
 export default function Navbar({ siteInfo }) {
   const [open, setOpen] = useState(false);
+
   const navbar = siteInfo?.navbar ?? {
     siteName: "TRUE BARBERS",
     siteTagline: "Family Owned",
@@ -49,40 +50,48 @@ export default function Navbar({ siteInfo }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0d1b2a]/95 backdrop-blur border-b border-yellow-500/20">
+
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5 md:py-6">
+
         <a href="#" className="flex items-center gap-4 md:gap-5">
+
           <div className="bg-yellow-500 p-3 md:p-4 rounded-full">
             <Scissors className="text-[#0d1b2a]" size={26} />
           </div>
 
           <div>
-            <h1 className="text-white text-2xl md:text-3xl font-bold tracking-wide">
+            <h1 className="logo-text text-white font-bold tracking-wide">
               {navbar.siteName}
             </h1>
-            <p className="text-yellow-400 text-sm md:text-base uppercase tracking-[4px]">
+
+            <p className="text-yellow-400 uppercase tracking-[4px] text-sm">
               {navbar.siteTagline}
             </p>
           </div>
+
         </a>
 
-        <nav className="hidden md:flex gap-10 text-lg md:text-xl">
+
+        <nav className="hidden md:flex gap-10">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-white hover:text-yellow-400 transition"
+              className="nav-text text-white hover:text-yellow-400 transition"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
+
         <a
           href={navbar.bookNowUrl}
-          className="hidden md:inline-flex items-center justify-center bg-yellow-500 text-[#0d1b2a] px-6 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-yellow-400 transition"
+          className="button-text hidden md:inline-flex items-center justify-center bg-yellow-500 text-[#0d1b2a] px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition"
         >
           {navbar.bookNowLabel}
         </a>
+
 
         <button
           onClick={() => setOpen(!open)}
@@ -90,9 +99,12 @@ export default function Navbar({ siteInfo }) {
         >
           {open ? <X size={34} /> : <Menu size={34} />}
         </button>
+
       </div>
 
+
       <div className="hidden md:flex items-center justify-center gap-4 border-t border-white/10 bg-[#0d1b2a]/80 px-6 py-3">
+
         {socialIcons.map((icon) => (
           <a
             key={icon.name}
@@ -101,32 +113,42 @@ export default function Navbar({ siteInfo }) {
             rel="noopener noreferrer"
             className="transition hover:opacity-80"
           >
-            <img src={icon.src} alt={icon.name} className="h-8 w-auto" />
+            <img
+              src={icon.src}
+              alt={icon.name}
+              className="h-8 w-auto"
+            />
           </a>
         ))}
+
       </div>
+
 
       {open && (
         <div className="md:hidden bg-[#10243b]">
+
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block px-6 py-5 border-b border-white/10 text-white text-lg hover:bg-[#18304d]"
+              className="block px-6 py-5 border-b border-white/10 text-white nav-text hover:bg-[#18304d]"
             >
               {link.name}
             </a>
           ))}
 
+
           <a
             href="#contact"
-            className="block text-center bg-yellow-500 text-[#0d1b2a] font-bold py-5 text-lg"
+            className="block text-center bg-yellow-500 text-[#0d1b2a] font-bold py-5 button-text"
           >
             Book Appointment
           </a>
+
         </div>
       )}
+
     </header>
   );
 }

@@ -10,16 +10,26 @@ import Contact from "./components/Contact";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
 import AdminPanel from "./components/AdminPanel";
+import TypographyControls from "./components/TypographyControls";
 import { defaultSiteInfo } from "./siteData";
 
 export default function App() {
   const [siteInfo, setSiteInfo] = useState(defaultSiteInfo);
+
   const pathname = window.location.pathname;
+  const debugMode =
+    new URLSearchParams(window.location.search).get("debug") === "true";
+
   const isAdminPath = pathname === "/admin";
   const isProductsPath = pathname === "/products";
 
   if (isAdminPath) {
-    return <AdminPanel siteInfo={siteInfo} onChange={setSiteInfo} />;
+    return (
+      <AdminPanel
+        siteInfo={siteInfo}
+        onChange={setSiteInfo}
+      />
+    );
   }
 
   return (
@@ -43,6 +53,8 @@ export default function App() {
       </main>
 
       <Footer footer={siteInfo.footer} />
+
+      {debugMode && <TypographyControls />}
     </>
   );
 }

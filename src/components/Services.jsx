@@ -36,13 +36,14 @@ export default function Services() {
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-5xl font-bold text-center text-[#08172c]">
+        <h2 className="section-title font-bold text-center text-[#08172c]">
           Our Services
         </h2>
 
-        <p className="text-center text-gray-500 mt-4 mb-16">
+        <p className="section-description text-center text-gray-500 mt-4 mb-16">
           Quality barbering with attention to every detail.
         </p>
+
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -51,17 +52,21 @@ export default function Services() {
               key={service.title}
               className="border rounded-2xl p-8 hover:shadow-xl transition duration-300 hover:-translate-y-2"
             >
+
               <div className="text-[#D4AF37] mb-5">
                 {service.icon}
               </div>
 
-              <h3 className="text-2xl font-bold mb-3">
+
+              <h3 className="service-title font-bold mb-3">
                 {service.title}
               </h3>
 
-              <p className="text-gray-600">
+
+              <p className="service-description text-gray-600">
                 {service.text}
               </p>
+
             </div>
           ))}
 
