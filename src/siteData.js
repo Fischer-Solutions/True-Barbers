@@ -121,8 +121,8 @@ export const defaultSiteInfo = {
 
     ],
     copyright: "© 2008 - 2026 True Barbers. All rights Reserved.",
-    designCredit: "Indianapolis Web Design by",
-    designLinkText: "WSI",
-    designLinkUrl: "https://www.maxwsisolutions.com/",
+    designCredit: " Website designed & developed by",
+    designLinkText: "Fischer Solutions",
+    designLinkUrl: "https://fischersolutions.nx.kg/",
   },
 };
