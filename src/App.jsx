@@ -14,7 +14,8 @@ import { defaultSiteInfo } from "./siteData";
 
 export default function App() {
   const [siteInfo, setSiteInfo] = useState(defaultSiteInfo);
-  const pathname = window.location.pathname;
+  const basePath = "/True-Barbers/";
+  const pathname = window.location.pathname.replace(basePath, "/");
   const isAdminPath = pathname === "/admin";
   const isProductsPath = pathname === "/products";
 
