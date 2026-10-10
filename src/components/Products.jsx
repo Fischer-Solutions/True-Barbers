@@ -3,12 +3,12 @@ export default function Products() {
     <section className="min-h-screen bg-white text-[#08172c]">
       <div className="max-w-6xl mx-auto px-6 py-24">
         <div className="flex flex-col items-center gap-8 text-center">
-          <img
+          {/*          <img
             src="https://www.truebarbers.com/wp-content/uploads/2019/10/barberlogo.jpg"
             alt="True Barbers Logo"
             className="mx-auto max-h-32"
           />
-          <div>
+*/"          <div>
             <p className="text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
               True Barbers Products
             </p>
