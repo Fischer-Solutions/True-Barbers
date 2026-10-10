@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/True-Barbers/#/" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting to the site...</p>
+    <script>
+      const siteBase = "/True-Barbers";
+      const requested = window.location.pathname.replace(siteBase, "") || "/";
+      const redirectTarget = requested === "/" ? `${siteBase}/#/` : `${siteBase}/#${requested}`;
+      window.location.replace(redirectTarget);
+    </script>
+  </body>
+</html>
