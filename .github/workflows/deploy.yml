@@ -1,4 +1,3 @@
-
 name: Deploy Vite App to GitHub Pages
 
 on:
@@ -32,7 +31,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          cp dist/index.html dist/404.html
 
       - name: Upload build
         uses: actions/upload-pages-artifact@v3
