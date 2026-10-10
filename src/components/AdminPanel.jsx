@@ -69,6 +69,8 @@ function removeBarber(siteInfo, onChange, index) {
 export default function AdminPanel({ siteInfo, onChange }) {
   if (!siteInfo) return null;
 
+  const siteRoot = import.meta.env.BASE_URL || "/";
+
   return (
     <div className="min-h-screen bg-[#f8f7f4] py-10 text-slate-900">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6">
@@ -86,7 +88,7 @@ export default function AdminPanel({ siteInfo, onChange }) {
               </p>
             </div>
             <a
-              href="/"
+              href={siteRoot}
               className="inline-flex rounded-full border border-slate-300 bg-slate-50 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
             >
               Return to site
@@ -314,7 +316,7 @@ export default function AdminPanel({ siteInfo, onChange }) {
               Reset defaults
             </button>
             <a
-              href="/"
+              href={siteRoot}
               className="rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 text-center"
             >
               Return to site

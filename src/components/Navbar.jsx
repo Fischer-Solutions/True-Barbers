@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Menu, X, Scissors } from "lucide-react";
 
+const baseUrl = import.meta.env.BASE_URL || "/";
+
 const links = [
-  { name: "Home", href: "/#" },
-  { name: "About", href: "/#about" },
-  { name: "Services", href: "/#services" },
-  { name: "Products", href: "/products" },
-  { name: "Barbers", href: "/#barbers" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Home", href: `${baseUrl}#` },
+  { name: "About", href: `${baseUrl}#about` },
+  { name: "Services", href: `${baseUrl}#services` },
+  { name: "Products", href: `${baseUrl}#/products` },
+  { name: "Barbers", href: `${baseUrl}#barbers` },
+  { name: "Contact", href: `${baseUrl}#contact` },
 ];
 
 const socialIcons = [
@@ -28,7 +30,7 @@ const socialIcons = [
   },
   {
     name: "Map",
-    href: "https://www.google.com/maps/place/True+Barbers/@39.96121,-86.1287697,17z/data=!3m1!4b1!4m5!3m4!1s0x8814ada8e1a144b5:0x309866bcc6e917a4!8m2!3d39.96121!4d-86.126581",
+    href: "https://www.google.com/maps/place/True+Barbers/@39.96121,-86.1287697,17z/data=!3m1!4b1!4m5!3m4!1s0x8814ada8e1a144b5:0x309866bcc6e917a4!8m2!1d39.96121!4d-86.126581",
     src: "https://www.truebarbers.com/wp-content/uploads/2019/10/gplus.png",
   },
   {
@@ -50,7 +52,7 @@ export default function Navbar({ siteInfo }) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0d1b2a]/95 backdrop-blur border-b border-yellow-500/20">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5 md:py-6">
-        <a href="#" className="flex items-center gap-4 md:gap-5">
+        <a href={baseUrl} className="flex items-center gap-4 md:gap-5">
           <div className="bg-yellow-500 p-3 md:p-4 rounded-full">
             <Scissors className="text-[#0d1b2a]" size={26} />
           </div>
@@ -78,7 +80,7 @@ export default function Navbar({ siteInfo }) {
         </nav>
 
         <a
-          href={navbar.bookNowUrl}
+          href={navbar.bookNowUrl.startsWith("#") ? `${baseUrl}${navbar.bookNowUrl}` : navbar.bookNowUrl}
           className="hidden md:inline-flex items-center justify-center bg-yellow-500 text-[#0d1b2a] px-6 py-3 rounded-full font-semibold text-lg md:text-xl hover:bg-yellow-400 transition"
         >
           {navbar.bookNowLabel}
@@ -120,7 +122,7 @@ export default function Navbar({ siteInfo }) {
           ))}
 
           <a
-            href="#contact"
+            href={navbar.bookNowUrl.startsWith("#") ? `${baseUrl}${navbar.bookNowUrl}` : navbar.bookNowUrl}
             className="block text-center bg-yellow-500 text-[#0d1b2a] font-bold py-5 text-lg"
           >
             Book Appointment
